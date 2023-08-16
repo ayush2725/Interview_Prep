@@ -1,0 +1,22 @@
+Top-down Recursion
+
+A general pattern it follows is:
+
+// Make an list to store all the answers
+ans = []
+
+'''
+A nested back-tracking function.
+It has the current combination which could be at any stage in the building
+'''
+def back(curr):
+  # Base case
+  # Usually len(curr) == something
+    ans.append(curr)
+    return
+  # the addition is made in the function call so that we don't have maintain and pop from a stack
+  back(curr + i)
+
+# Call the back-tracking function for the empty case
+back('')
+return ans
